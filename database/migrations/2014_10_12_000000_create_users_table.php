@@ -18,10 +18,11 @@ return new class extends Migration
             $table->string('name', 20);
             $table->string('surname', 20);
             $table->date('date_of_birth')->nullable();
+            $table->string('role');
+            $table->string('profile_picture');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('profile_picture');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vat_number', function (Blueprint $table) {
+        Schema::create('table', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->float('n.vat_number');
-            $table->float('vat_number_code');
         });
     }
 
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vat_number');
+        Schema::dropIfExists('table');
     }
 };
