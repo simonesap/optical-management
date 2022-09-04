@@ -15,25 +15,26 @@ return new class extends Migration
     {
         Schema::create('wednesday', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->date('data');
-            $table->integer('n.oridini_1');
-            $table->integer('n.ordini_2_8');
-            $table->integer('fatturato_ordini_1_8');
-            $table->integer('prezzo_medio_ordini_1_8');
-            $table->integer('monofocali');
-            $table->integer('progressive');
-            $table->integer('antiriflesso');
-            $table->integer('busc');
-            $table->integer('premium');
-            $table->integer('qualità');
-            $table->integer('n.pezzi_sole');
-            $table->integer('sole_grad');
-            $table->integer('vendite_aggiuntive');
-            $table->integer('refrazioni');
-            $table->integer('conv_refra');
-            $table->integer('rx_mediche');
-            $table->integer('totale_n.ordini');
+            $table->float('n_oridini_1');
+            $table->float('n_ordini_2_8');
+            $table->float('fatturato_ordini_1_8');
+            $table->float('prezzo_medio_ordini_1_8');
+            $table->float('monofocali');
+            $table->float('progressive');
+            $table->float('antiriflesso');
+            $table->float('busc');
+            $table->float('premium');
+            $table->float('qualità');
+            $table->float('n_pezzi_sole');
+            $table->float('sole_grad');
+            $table->float('vendite_aggiuntive');
+            $table->float('refrazioni');
+            $table->float('conv_refra');
+            $table->float('rx_mediche');
+            $table->float('totale_n_ordini');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

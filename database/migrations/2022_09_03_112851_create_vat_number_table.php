@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('vat_number', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->float('n.vat_number');
-            $table->float('vat_number_code');
+            $table->string('vat_n');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
