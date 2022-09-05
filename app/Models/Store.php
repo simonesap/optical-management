@@ -15,4 +15,12 @@ class Store extends Model
         'address',
         'level'
     ];
+
+    public function vat_number() {
+        return $this->belongsTo(Vatnumber::class);
+    }
+
+    public function user() {
+        return $this->hasMany(User::class);
+    }
 }

@@ -73,6 +73,7 @@ class ClientSeeder extends Seeder
                 'phone_number' => $phone_number[$i],
                 'date_of_birth' => $dateofbirth[$i],
                 'email' => $email[$i],
+                'department_id' => 1,
             ]);
         }
 

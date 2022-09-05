@@ -11,9 +11,14 @@ class Vatnumber extends Model
 
     protected $fillable = [
         'vat_n',
+        'department_id'
     ];
 
-//     public function store() {
-//         return $this->belongsTo('App\Models\Store');
-//     }
+    public function department() {
+        return $this->belongsTo(Department::class);
+    }
+
+    public function store() {
+        return $this->hasMany(Store::class);
+    }
 }

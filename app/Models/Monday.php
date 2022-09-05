@@ -28,4 +28,8 @@ class Monday extends Model
         'rx_mediche',
         'totale_n_ordini'
     ];
+
+    public function week() {
+        return $this->hasOne(Monday::class);
+    }
 }

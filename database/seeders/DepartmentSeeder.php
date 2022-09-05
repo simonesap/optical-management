@@ -24,7 +24,7 @@ class DepartmentSeeder extends Seeder
 
         for($i=0; $i < 2; $i++){
             DB::table('department')->insert([
-                'department_name' => $dep_name[$i]
+                'department_name' => $dep_name[$i],
             ]);
         };
     }

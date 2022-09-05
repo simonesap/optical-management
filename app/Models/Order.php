@@ -13,5 +13,17 @@ class Order extends Model
         'date',
         'product',
         'sales_price'
-    ]
+    ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
+    public function client() {
+        return $this->belongsTo(Client::class);
+    }
+
+    public function monday() {
+        return $this->hasOne(Client::class);
+    }
 }

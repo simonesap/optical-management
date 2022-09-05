@@ -22,7 +22,7 @@ class User extends Authenticatable
         'surname',
         'date_of_birth',
         'role',
-        'profile_picture'
+        'profile_picture',
         'email',
         'email_verified_at',
         'password',
@@ -46,4 +46,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function store() {
+        return $this->belongsTo(Store::class);
+    }
+
+    public function order() {
+        return $this->hasMany(Order::class);
+    }
 }

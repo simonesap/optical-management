@@ -39,10 +39,28 @@ class OrderSeeder extends Seeder
             140
         ];
 
-        for($i=0; $i < 8; $i++){
+        $user_id = [
+            1,
+            2,
+            3,
+            4,
+            5,
+        ];
+
+        $client_id = [
+            1,
+            2,
+            3,
+            4,
+            5,
+        ];
+
+        for($i=0; $i < 5; $i++){
             DB::table('order')->insert([
                 'product' => $products[$i],
-                'sales_price' => $prices[$i]
+                'sales_price' => $prices[$i],
+                'user_id' => $user_id[$i],
+                'client_id' => $client_id[$i],
             ]);
         }
     }

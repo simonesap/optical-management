@@ -25,6 +25,15 @@ class Client extends Model
         'appointments',
         'document',
         'Customer_Lifetime_Value',
-        'shopping_preferences'
-    ]
+        'shopping_preferences',
+        'department_id',
+    ];
+
+    public function department() {
+        return $this->belongsTo(Department::class);
+    }
+
+    public function order() {
+        return $this->hasMany(Order::class);
+    }
 }

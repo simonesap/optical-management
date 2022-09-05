@@ -43,6 +43,10 @@ class StoreSeeder extends Seeder
             'platinum'
         ];
 
+        $vnumber = [
+            1,2,3,4,5
+        ];
+
 
         for($i = 0; $i < 5; $i++){
 
@@ -52,7 +56,8 @@ class StoreSeeder extends Seeder
                 'store_name' => $store_name[$i],
                 // 'slug' => Str::slug($store->store_name, '-'),
                 'address' => $address[$i],
-                'level' => $level[$i]
+                'level' => $level[$i],
+                'vat_number_id' => $vnumber[$i]
             ]);
         }
     }

@@ -50,12 +50,21 @@ class UserSeeder extends Seeder
             'password',
         ];
 
+        $store = [
+            1,
+            2,
+            3,
+            4,
+            5,
+        ];
+
         for($i = 0; $i < 5; $i++){
             DB::table('users')->insert([
                 'name' => $names[$i],
                 'surname' =>  $surnames[$i],
                 'email' => $emails[$i],
                 'password' => Hash::make($passwords[$i]),
+                'store_id' => $store[$i],
             ]);
         }
 
