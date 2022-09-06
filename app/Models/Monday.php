@@ -29,7 +29,11 @@ class Monday extends Model
         'totale_n_ordini'
     ];
 
+    public function order() {
+        return $this->hasMany(Order::class);
+    }
+
     public function week() {
-        return $this->hasOne(Monday::class);
+        return $this->belongsTo(Week::class);
     }
 }

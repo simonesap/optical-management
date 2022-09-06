@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('saturday', function (Blueprint $table) {
             $table->id();
+            // $table->unsignedBigInteger('week_id')->nullable()->after('id');
+            // $table->foreign('week_id')
+            //       ->references('id')
+            //       ->on('week')
+            //       ->onDelete('cascade')
+            //       ->onUpdate('cascade');
             $table->date('data');
             $table->float('n_oridini_1');
             $table->float('n_ordini_2_8');
@@ -46,5 +52,8 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('saturday');
+
+        // $table->dropForeign('saturday_week_id_foreign');
+        // $table->dropColumn('week_id');
     }
 };

@@ -36,4 +36,18 @@ class Client extends Model
     public function order() {
         return $this->hasMany(Order::class);
     }
+
+    public function billing_information() {
+        return $this->hasOne(Billinginformation::class);
+    }
+
+    public function optometric_card() {
+        return $this->hasOne(Optometric::class);
+    }
+
+    public function contactology_card() {
+        return $this->hasOne(Contactologycard::class);
+    }
+
+
 }

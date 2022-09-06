@@ -28,4 +28,12 @@ class Saturday extends Model
         'rx_mediche',
         'totale_n_ordini'
     ];
+
+    public function order() {
+        return $this->hasMany(Order::class);
+    }
+
+    public function week() {
+        return $this->belongsTo(Week::class);
+    }
 }

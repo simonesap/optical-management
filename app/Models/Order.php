@@ -24,6 +24,30 @@ class Order extends Model
     }
 
     public function monday() {
-        return $this->hasOne(Client::class);
+        return $this->belongsTo(Monday::class);
+    }
+
+    public function tuesday() {
+        return $this->belongsTo(Tuesday::class);
+    }
+
+    public function wednesday() {
+        return $this->belongsTo(Wednesday::class);
+    }
+
+    public function thursday() {
+        return $this->belongsTo(Thursday::class);
+    }
+
+    public function friday() {
+        return $this->belongsTo(Friday::class);
+    }
+
+    public function saturday() {
+        return $this->belongsTo(Saturday::class);
+    }
+
+    public function sunday() {
+        return $this->belongsTo(Sunday::class);
     }
 }

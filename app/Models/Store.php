@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Store extends Model
 {
@@ -21,6 +22,6 @@ class Store extends Model
     }
 
     public function user() {
-        return $this->hasMany(User::class);
+        return $this->hasMany(User::class)->where('user_id', Auth::users()->id)->get();
     }
 }
