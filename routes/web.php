@@ -19,10 +19,15 @@ Auth::routes();
 
 // Back-end route
 Route::middleware('auth')
-->prefix('admin')
-->name('admin.')
-->namespace('Admin')
-->group( function(){
+       ->prefix('admin')
+       ->name('admin.')
+       ->namespace('Admin')
+       ->group( function(){
     Route::get('/', 'HomeController@index')->name('home');
 
 });
+
+// Front-end route
+Route::get('{any?}',function(){
+    return view('guest.home');
+} )->where('any', ".*");

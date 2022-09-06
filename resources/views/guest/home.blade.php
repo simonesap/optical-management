@@ -36,7 +36,7 @@
                 </div>
             @endif
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+            {{-- <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
                         <g clip-path="url(#clip0)" fill="#EF3B2D">
@@ -125,24 +125,10 @@
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
-                </div>
+                </div> --}}
             </div>
+            {{-- <div id="root"></div>
+            <script src="{{asset('js/app.js')}}"></script> --}}
         </div>
     </body>
 </html>
-
-{{-- <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel React application</title>
-    <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
-</head>
-<body>
-<h2 style="text-align: center"> Laravel and React application </h2>
-<div id="root"></div>
-<script src="{{mix('js/app.js')}}" ></script>
-</body>
-</html> --}}
