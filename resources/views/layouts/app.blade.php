@@ -24,7 +24,16 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Optical-Management') }}
                 </a>
-                <a href="">front</a>
+
+                <ul>
+                    <li>
+                        <a href="/">front</a>
+                    </li>
+                    {{-- <li class="nav-item pl-3 pl-lg-0">
+                        <a class="nav-link c_navbar" href="{{ route('admin.dashboard')}}">Dashboard</a>
+                    </li> --}}
+                </ul>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
